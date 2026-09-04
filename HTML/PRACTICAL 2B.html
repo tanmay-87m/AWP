@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addition Using Event Handling</title>
+    <script>
+        function addNumbers() {
+            let num1 = parseFloat(document.getElementById("n1").value);
+            let num2 = parseFloat(document.getElementById("n2").value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                let sum = num1 + num2;
+                document.getElementById("result").innerHTML = "Result: " + sum;
+            } else {
+                document.getElementById("result").innerHTML = "Please enter valid numbers!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Addition of Two Numbers (Event Handling)</h2>
+
+    <label>Enter First Number:</label><br>
+    <input type="text" id="n1"><br><br>
+
+    <label>Enter Second Number:</label><br>
+    <input type="text" id="n2"><br><br>
+
+    <button onclick="addNumbers()">Add</button>
+
+    <p id="result"></p>
+</body>
+</html>
